@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ClearEdge Technologies — Software Testing & Development</title>
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta name="description" content="ClearEdge Technologies — Software testing, QA automation and custom development for startups, SMBs and e-commerce." />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/"><img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo"></a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a class="btn" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Software Testing & Development You Can Trust</h1>
+        <p>End-to-end QA and full-stack development for startups, e-commerce and international clients.</p>
+        <div class="cta">
+          <a class="btn primary" href="contact.html">Get a Free Quote</a>
+          <a class="btn ghost" href="services.html">Our Services</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="{{ url_for('static', filename='assets/hero.png') }}" alt="Testing & Development" />
+      </div>
+    </div>
+  </section>
+
+  <section class="features container">
+    <article>
+      <h3>Manual & Automation QA</h3>
+      <p>Selenium, Playwright, Cypress — reliable automated tests plus expert manual coverage.</p>
+    </article>
+    <article>
+      <h3>Web & Mobile Development</h3>
+      <p>MVPs, e-commerce, APIs and mobile apps using modern stacks for speed and scale.</p>
+    </article>
+    <article>
+      <h3>Performance & API Testing</h3>
+      <p>Load testing, API validation and security checks to keep systems stable under load.</p>
+    </article>
+  </section>
+
+  <section class="about-snippet">
+    <div class="container">
+      <h2>Why ClearEdge?</h2>
+      <p>We combine testing excellence with full-stack engineering — so issues are found early and fixed fast.</p>
+      <a class="btn" href="about.html">Learn More</a>
+    </div>
+  </section>
+
+  <section class="work container">
+    <h2>Selected Work</h2>
+    <div class="grid">
+      <div class="card">
+        <h4>E-commerce Checkout Optimization</h4>
+        <p>Reduced failures by 45% via automated tests and performance tuning.</p>
+      </div>
+      <div class="card">
+        <h4>Startup MVP</h4>
+        <p>Built a secure, scalable web app and end-to-end QA pipeline for rapid release.</p>
+      </div>
+      <div class="card">
+        <h4>API Test Suite</h4>
+        <p>Automated Postman + CI tests for critical payments APIs.</p>
+      </div>
+    </div>
+    <a class="btn ghost" href="portfolio.html">See Full Portfolio</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="ClearEdge" class="footer-logo" />
+      <p>ClearEdge Technologies — Delivering high-quality software and QA services.</p>
+    </div>
+    <div class="footer-links">
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <p>© <span id="year"></span> ClearEdge Technologies</p>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Services — ClearEdge Technologies{% endblock %}
+
+{% block content %}
+<h1>Our Services</h1>
+<p>Testing, development, and engineering solutions that drive real business impact.</p>
+
+<section class="services-grid">
+
+  <!-- Software Testing -->
+  <div class="service-card">
+    <img src="{{ url_for('static', filename='assets/magnifying-glass-bug.gif') }}" class="service-icon" alt="Testing">
+    <h3>Software Testing</h3>
+    <p>
+      Manual QA, exploratory testing, acceptance testing, and complete QA strategy for your product lifecycle.
+    </p>
+    <div class="tags">
+      <span class="tag">Manual QA</span>
+      <span class="tag">Exploratory</span>
+      <span class="tag">UAT</span>
+    </div>
+  </div>
+
+  <!-- Automation Testing -->
+  <div class="service-card">
+    <img src="{{ url_for('static', filename='assets/retargeting.gif') }}" class="service-icon"  alt="Automation">
+    <link rel="stylesheet" href="https://www.browserstack.com/guide/manual-testing-tutorial"  alt="Automation">
+    <h3>Automation Testing</h3>
+    <p>
+      Full UI & API automation using Selenium, Playwright, Cypress — integrated with CI/CD pipelines for fast releases.
+    </p>
+    <div class="tags">
+      <span class="tag">Selenium</span>
+      <span class="tag">Playwright</span>
+      <span class="tag">Cypress</span>
+    </div>
+  </div>
+
+  <!-- Performance Testing -->
+  <div class="service-card">
+    <img src="{{ url_for('static', filename='assets/speedmeter.gif') }}" class="service-icon" alt="Performance">
+    <h3>Performance & Load Testing</h3>
+    <p>
+      Identify bottlenecks with JMeter, k6, and real-world simulations to ensure your product performs under heavy load.
+    </p>
+    <div class="tags">
+      <span class="tag">JMeter</span>
+      <span class="tag">k6</span>
+      <span class="tag">Benchmarking</span>
+    </div>
+  </div>
+
+  <!-- Software Development -->
+  <div class="service-card">
+    <img src="{{ url_for('static', filename='assets/programmer.gif') }}" class="service-icon" alt="Development">
+    <h3>Software Development</h3>
+    <p>
+      Web, mobile, and API development with scalable architecture, clean code, and modern stacks.
+    </p>
+    <div class="tags">
+      <span class="tag">Full-Stack</span>
+      <span class="tag">APIs</span>
+      <span class="tag">Mobile</span>
+    </div>
+  </div>
+
+  <!-- Maintenance -->
+  <div class="service-card">
+    <img src="{{ url_for('static', filename='assets/rocket.gif') }}" class="service-icon" alt="Support">
+    <h3>Maintenance & Support</h3>
+    <p>
+      Continuous testing, monitoring, bug fixes, and performance checks under month-to-month retainer plans.
+    </p>
+    <div class="tags">
+      <span class="tag">Ongoing QA</span>
+      <span class="tag">Bug Fixing</span>
+      <span class="tag">Monitoring</span>
+    </div>
+  </div>
+
+  <!-- New Service 1 -->
+  <div class="service-card">
+    <img src="{{ url_for('static', filename='assets/information.png') }}" class="service-icon" alt="Consulting">
+    <h3>QA Consulting & Process Setup</h3>
+    <p>
+      Help teams set up QA workflows, test strategies, tools, and documentation from scratch.
+    </p>
+    <div class="tags">
+      <span class="tag">Strategy</span>
+      <span class="tag">Documentation</span>
+      <span class="tag">Tooling</span>
+    </div>
+  </div>
+
+  <!-- New Service 2 -->
+  <div class="service-card">
+    <img src="{{ url_for('static', filename='assets/devops.png') }}" class="service-icon" alt="DevOps">
+    <h3>CI/CD & Test Infrastructure</h3>
+    <p>
+      Setup pipelines, automated test triggers, environment management and reporting dashboards.
+    </p>
+    <div class="tags">
+      <span class="tag">GitHub Actions</span>
+      <span class="tag">Docker</span>
+      <span class="tag">CI/CD</span>
+    </div>
+  </div>
+
+</section>
+
+{% endblock %}

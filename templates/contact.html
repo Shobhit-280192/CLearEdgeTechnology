@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Contact — ClearEdge Technologies{% endblock %}
+
+{% block content %}
+
+<section class="contact-hero">
+  <h1>Get in Touch</h1>
+  <p>Let’s collaborate. Tell us about your project, and our team will respond within 24 hours.</p>
+</section>
+
+<div class="contact-wrapper">
+
+  <!-- LEFT INFO PANEL -->
+  <div class="contact-info">
+    <h2>Contact Details</h2>
+    <p>We’re always excited to work with startups, enterprises, and innovators.</p>
+
+    <div class="info-block">
+      <h4>Email</h4>
+      <p>hello@clearedgetech.com</p>
+    </div>
+
+    <div class="info-block">
+      <h4>Phone</h4>
+      <p>+91 98765 43210</p>
+    </div>
+
+    <div class="info-block">
+      <h4>Office</h4>
+      <p>Noida • Bengaluru • Remote Worldwide</p>
+    </div>
+
+    <div class="info-social">
+      <h4>Follow Us</h4>
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
+      <a href="#">GitHub</a>
+    </div>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <form id="contactForm" class="contact-form" method="POST" action="/contact">
+
+    <div class="field">
+      <input type="text" name="name" id="name" required />
+      <label for="name">Your Name</label>
+    </div>
+
+    <div class="field">
+      <input type="email" name="email" id="email" required />
+      <label for="email">Email Address</label>
+    </div>
+
+    <div class="field">
+      <input 
+        type="tel" 
+        name="phone" 
+        id="phone" 
+        pattern="[0-9]{10}" 
+        maxlength="10"
+        inputmode="numeric"
+      />
+    <label for="phone">Phone (optional)</label>
+    </div>
+    <small class="note">Format: 10–digit mobile number (e.g., 9876543210)</small>
+
+
+    <div class="field">
+      <input type="text" name="company" id="company"/>
+      <label for="company">Company (optional)</label>
+    </div>
+
+    <div class="field textarea">
+      <textarea name="message" id="message" rows="6" required></textarea>
+      <label for="message">Your Message</label>
+    </div>
+
+    <button type="submit" class="btn primary submit-btn">
+      Send Message
+      <span class="loader"></span>
+    </button>
+
+    <div id="formStatus" class="form-status" role="status"></div>
+  </form>
+
+</div>
+
+<!-- Google Map -->
+<div class="map-container">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.144687000823!2d80.9852983754374!3d26.862220576693443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be311c37e49ff%3A0xcc18c5014a4f14f!2sNoida!5e0!3m2!1sen!2sin!4v1700000000000"
+    width="100%" height="350" style="border:0;" allowfullscreen loading="lazy">
+  </iframe>
+</div>
+
+{% endblock %}

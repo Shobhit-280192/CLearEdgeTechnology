@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}About — ClearEdge Technologies{% endblock %}
+
+{% block content %}
+
+
+<!-- HERO -->
+<section class="about-hero">
+  <h1>About ClearEdge Technologies</h1>
+  <p>
+    We’re a team of QA engineers, automation experts, and software developers committed to building scalable and reliable digital products for startups, enterprises, and global e-commerce brands.
+  </p>
+</section>
+
+<!-- MISSION -->
+<section class="about-section">
+  <h2>Our Mission</h2>
+  <div class="mission-box">
+    <p>
+      To deliver engineering excellence through quality-first development, bulletproof testing, and scalable automation — empowering businesses to release faster and with confidence.
+    </p>
+  </div>
+</section>
+
+<!-- VALUES / APPROACH -->
+<section class="about-section">
+  <h2>Our Approach</h2>
+
+  <div class="values-grid">
+
+    <div class="value-card">
+      <img src="{{ url_for('static', filename='assets/books.gif') }}" alt="Shift Left">
+      <h3>Shift-Left Testing</h3>
+      <p>We identify issues early and build quality into every stage of development.</p>
+    </div>
+
+    <div class="value-card">
+      <img src="{{ url_for('static', filename='assets/retargeting.gif') }}" alt="Automation">
+      <h3>Automation-First</h3>
+      <p>End-to-end automation for faster cycles, fewer regressions, and higher stability.</p>
+    </div>
+
+    <div class="value-card">
+      <img src="{{ url_for('static', filename='assets/communications.gif') }}" alt="Communication">
+      <h3>Transparent Communication</h3>
+      <p>Daily updates, clear documentation, and accessible reporting dashboards.</p>
+    </div>
+
+    <div class="value-card">
+      <img src="{{ url_for('static', filename='assets/search.gif') }}" alt="Custom Solutions">
+      <h3>Custom Solutions</h3>
+      <p>Every business is different. We design workflows and test strategies that fit your needs.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="about-section">
+  <h2>Our Journey</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <h4>2019 — Founded</h4>
+      <p>ClearEdge Technologies began as a small QA consulting team.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h4>2021 — Automation Expansion</h4>
+      <p>Launched full automation services using Selenium, Cypress & Playwright.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h4>2023 — Global Clients</h4>
+      <p>Partnered with US & UK startups, e-commerce companies, and fintech platforms.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h4>2025 — Full Engineering Services</h4>
+      <p>Offering development, DevOps, CI/CD, and QA automation as a complete package.</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

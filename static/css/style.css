@@ -546,4 +546,70 @@ body{
   color:var(--accent);
 }
 
+body {
+            background: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+
+        .breadcrumb {
+            margin: 20px;
+            font-size: 18px;
+            color: #777;
+        }
+
+        .leader-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .leader-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .leader-card img {
+            width: 100%;
+            border-radius: 5px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .leader-name {
+            font-size: 22px;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .leader-role {
+            color: #555;
+            margin: 5px 0 15px;
+            font-style: italic;
+        }
+
+        .view-more {
+            font-weight: bold;
+            color: #1dbb52;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .view-more:hover {
+            text-decoration: underline;
+        }
+
 

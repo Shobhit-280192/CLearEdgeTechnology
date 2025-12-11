@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Contact — ClearEdge Technologies{% endblock %}
+
+{% block content %}
+
+<body>
+
+    <div class="breadcrumb">
+        <span>Leadership Team</span>
+    </div>
+
+    <div class="leader-container">
+
+        <div class="leader-card">
+            <img src="{{ url_for('static', filename='assets/founder.png') }}" alt="Shobhit Agarwal">
+            <div class="leader-name">Shobhit Agarwal</div>
+            <div class="leader-role">Founder</div>
+        </div>
+
+        <div class="leader-card">
+            <img src="{{ url_for('static', filename='assets/26690.jpg') }}" alt="">
+            <div class="leader-name"></div>
+            <div class="leader-role"></div>
+            
+        </div>
+
+        <div class="leader-card">
+            <img src="{{ url_for('static', filename='assets/26690.jpg') }}" alt="">
+            <div class="leader-name"></div>
+            <div class="leader-role"></div>
+        </div>
+
+        <div class="leader-card">
+            <img src="{{ url_for('static', filename='assets/26690.jpg') }}" alt="">
+            <div class="leader-name"></div>
+            <div class="leader-role"></div>
+        </div>
+
+    </div>
+
+</body>
+{% endblock %}

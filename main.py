@@ -4,15 +4,20 @@ from datetime import datetime
 import os
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static", template_folder="templates")
 
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+# --------------------------
+# LOAD MONGODB CONNECTION
+# --------------------------
+mongo_uri = os.environ.get("MONGO_URI")
 
+if not mongo_uri:
+    raise ValueError("❌ ERROR: MONGO_URI is not set in Render environment variables.")
+
+app.config["MONGO_URI"] = mongo_uri
+
+# Initialize MongoDB
 mongo = PyMongo(app)
-
-print("Loaded MONGO_URI:", os.environ.get("MONGO_URI"))
-
-
 
 @app.route("/")
 def home():
@@ -36,7 +41,6 @@ def service():
 
 @app.route("/api/contact", methods=["POST"])
 def contact_api():
-    print("CONTACT API HIT!")
     data = request.json
 
     email = data.get("email")
@@ -69,14 +73,5 @@ def contact_api():
         "message": "Thank you! Your request has been submitted successfully."
     }), 201
 
-
-
-
-
-
-
-
-
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)

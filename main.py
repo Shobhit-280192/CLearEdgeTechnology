@@ -6,10 +6,11 @@ import os
 
 app = Flask(__name__)
 
-app.config["URI"] = os.environ.get("URI")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
 mongo = PyMongo(app)
 
+print("Loaded MONGO_URI:", os.environ.get("MONGO_URI"))
 
 
 

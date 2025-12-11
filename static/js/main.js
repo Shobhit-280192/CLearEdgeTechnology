@@ -17,7 +17,6 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   }, 1500);
 });
 document.getElementById('year')?.textContent == new Date().getFullYear();
-console.log("JS loaded!!!");
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const statusDiv = document.getElementById("formStatus");
@@ -45,9 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const data = await res.json();
-
-    console.log("API RESPONSE:", data); // ✅ DEBUG
-
     statusDiv.textContent = data.message;
 
     if (data.status === "success") {

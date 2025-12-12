@@ -1,8 +1,11 @@
 from flask import Flask,Response,jsonify ,render_template,request
 from flask_pymongo import PyMongo
 from datetime import datetime
+from dotenv import load_dotenv
 import os
 
+# Load .env file ONLY in local environment
+load_dotenv()
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
@@ -26,6 +29,10 @@ def home():
 @app.route("/about.html")
 def about():
     return render_template("about.html")
+
+@app.route("/leaderboard.html")
+def leaderboard():
+    return render_template("leaderboard.html")
 
 @app.route("/contact.html")
 def contact():

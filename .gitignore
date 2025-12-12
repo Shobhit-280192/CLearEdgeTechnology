@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+/api-env/
+*.env
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Logs
+*.log
+
+# Byte-compiled
+*.egg-info/
+dist/
+build/
+
+# Local environment files
+.env
+*.local
+
+# Render build cache
+render-build/
+.txt

@@ -1,7 +1,7 @@
 :root{
   --primary:#0f7fe7;
   --accent:#afeef4;
-  --muted:#6b7280;
+  --muted:#2f4777;
   --bg:#c8dff6;
   --maxw:1100px;
   --radius:14px;
@@ -16,7 +16,7 @@
 
 body{
   background:var(--bg);
-  color:#0b1720;
+  color:#1a4461;
   line-height:1.6;
 }
 
@@ -97,6 +97,22 @@ body{
   margin-bottom:22px;
 }
 
+.hero-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.hero-stats strong {
+  font-size: 22px;
+  display: block;
+}
+
+.hero-stats span {
+  font-size: 14px;
+  color: #666;
+}
+
 /* BUTTONS */
 .btn{
   display:inline-block;
@@ -126,23 +142,65 @@ body{
 }
 
 /* FEATURES */
-.features{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  padding:50px 0;
+.features {
+  padding: 80px 0;
+  background: #f9fafb;
 }
-.features article{
-  background:#fff;
-  padding:22px;
-  border-radius:var(--radius);
-  box-shadow:var(--shadow-sm);
-  transition:transform .3s, box-shadow .3s;
+
+.features-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
 }
-.features article:hover{
-  transform:translateY(-6px);
-  box-shadow:var(--shadow-md);
+
+/* LEFT SIDE */
+.features-intro h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
 }
+
+.features-intro p {
+  color: #555;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.features-points {
+  list-style: none;
+  padding: 0;
+}
+
+.features-points li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* RIGHT SIDE */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 24px 26px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
 
 /* ABOUT SECTION */
 .about-snippet{
@@ -641,6 +699,19 @@ body {
 .timeline-item.goal::before {
     background: #ff9800;
 }
+
+.badge {
+  display: inline-block;
+  background: #eef3ff;
+  color: #2b4eff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+
+
 
 
 

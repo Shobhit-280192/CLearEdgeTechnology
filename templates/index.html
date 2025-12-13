@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ClearEdge Technologies — Software Testing & Development</title>
-  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/favicon.png') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <meta name="description" content="ClearEdge Technologies — Software testing, QA automation and custom development for startups, SMBs and e-commerce." />
 </head>
@@ -25,35 +25,116 @@
 
 <main>
   <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <h1>Software Testing & Development You Can Trust</h1>
-        <p>End-to-end QA and full-stack development for startups, e-commerce and international clients.</p>
-        <div class="cta">
-          <a class="btn primary" href="contact.html">Get a Free Quote</a>
-          <a class="btn ghost" href="services.html">Our Services</a>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="badge">QA • Development • DevOps</span>
+      <h1>
+        Reliable Software.<br>
+        Faster Releases.<br>
+        Zero Guesswork.
+      </h1>
+      <p>
+        ClearEdge Technologies helps startups and growing businesses build,
+        test, and scale software with confidence.
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="contact.html">Get Free Consultation</a>
+        <a class="btn ghost" href="portfolio.html">View Our Work</a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <strong>50+</strong>
+          <span>Projects Delivered</span>
+        </div>
+        <div>
+          <strong>99%</strong>
+          <span>Client Satisfaction</span>
+        </div>
+        <div>
+          <strong>2025</strong>
+          <span>Founded</span>
         </div>
       </div>
-      <div class="hero-image">
-        <img src="{{ url_for('static', filename='assets/hero.png') }}" alt="Testing & Development" />
+    </div>
+
+    <div class="hero-image">
+      <img src="{{ url_for('static', filename='assets/hero.png') }}" alt="Software Testing & Development">
+    </div>
+  </div>
+</section>
+
+  <section class="audience">
+  <div class="container">
+    <h2>Who We Work With</h2>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <h4>🚀 Startups</h4>
+        <p>MVPs, fast iterations, automation-first QA and scalable architecture.</p>
+      </div>
+      <div class="audience-card">
+        <h4>🛒 E-Commerce</h4>
+        <p>Checkout reliability, performance testing and revenue-critical QA.</p>
+      </div>
+      <div class="audience-card">
+        <h4>🏢 SMBs & Enterprises</h4>
+        <p>Process-driven testing, CI/CD integration and long-term support.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="features container">
-    <article>
-      <h3>Manual & Automation QA</h3>
-      <p>Selenium, Playwright, Cypress — reliable automated tests plus expert manual coverage.</p>
-    </article>
-    <article>
-      <h3>Web & Mobile Development</h3>
-      <p>MVPs, e-commerce, APIs and mobile apps using modern stacks for speed and scale.</p>
-    </article>
-    <article>
-      <h3>Performance & API Testing</h3>
-      <p>Load testing, API validation and security checks to keep systems stable under load.</p>
-    </article>
-  </section>
+
+
+  <section class="features">
+  <div class="container features-layout">
+
+    <!-- LEFT SIDE -->
+    <div class="features-intro">
+      <h2>What We Do Best</h2>
+      <p>
+        We help teams build reliable, scalable software by combining
+        engineering excellence with quality-first testing practices.
+      </p>
+
+      <ul class="features-points">
+        <li>✔ Faster releases</li>
+        <li>✔ Fewer production bugs</li>
+        <li>✔ Scalable architecture</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>🧪 QA & Automation</h3>
+        <p>
+          Manual, exploratory and automation testing using Selenium,
+          Playwright and Cypress — built for CI/CD.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>💻 Software Development</h3>
+        <p>
+          Web, mobile and API development using clean architecture
+          and modern stacks.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>⚡ Performance & Security</h3>
+        <p>
+          Load testing, API validation and reliability engineering
+          under real-world traffic.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
   <section class="about-snippet">
     <div class="container">
@@ -63,12 +144,35 @@
     </div>
   </section>
 
+  <section class="process">
+  <div class="container">
+    <h2>How We Work</h2>
+    <div class="process-steps">
+      <div>
+        <span>01</span>
+        <h4>Understand</h4>
+        <p>We learn your product, users and business goals.</p>
+      </div>
+      <div>
+        <span>02</span>
+        <h4>Build & Test</h4>
+        <p>Engineering and QA work together from day one.</p>
+      </div>
+      <div>
+        <span>03</span>
+        <h4>Scale & Support</h4>
+        <p>We optimize, automate and support long-term growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
   <section class="work container">
     <h2>Selected Work</h2>
     <div class="grid">
       <div class="card">
         <h4>E-commerce Checkout Optimization</h4>
-        <p>Reduced failures by 45% via automated tests and performance tuning.</p>
+        <p>Improved transaction success from 72% → 96% using automation and load testing.</p>
       </div>
       <div class="card">
         <h4>Startup MVP</h4>
@@ -81,6 +185,14 @@
     </div>
     <a class="btn ghost" href="portfolio.html">See Full Portfolio</a>
   </section>
+
+  <section class="final-cta">
+  <div class="container">
+    <h2>Let’s Build Reliable Software Together</h2>
+    <p>Tell us about your product — we’ll handle quality and scale.</p>
+    <a class="btn primary" href="contact.html">Start a Conversation</a>
+  </div>
+</section>
 </main>
 
 <footer class="footer">
@@ -93,6 +205,7 @@
       <a href="services.html">Services</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="contact.html">Contact</a>
+      <a href="https://www.google.com/search?q=Exploratory+Testing">Linkdin</a>
     </div>
     <div>
       <p>© <span id="year"></span> ClearEdge Technologies</p>

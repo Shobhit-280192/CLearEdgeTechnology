@@ -1,11 +1,11 @@
 from flask import Flask,Response,jsonify ,render_template,request
 from flask_pymongo import PyMongo
 from datetime import datetime
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import os
 
 # Load .env file ONLY in local environment
-load_dotenv()
+#load_dotenv()
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
 

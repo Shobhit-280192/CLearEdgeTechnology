@@ -1,46 +1,31 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ClearEdge Technologies — Software Testing & Development</title>
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/favicon.png') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <meta name="description" content="ClearEdge Technologies — Software testing, QA automation and custom development for startups, SMBs and e-commerce." />
-</head>
-<body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="logo" href="/"><img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo"></a>
-    <nav class="nav">
-      <a href="/">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="/leaderboard.html">LeaderShip</a>
-      <a class="btn" href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+{% extends "base.html" %}
+
+{% block title %}About — ClearEdge Technologies{% endblock %}
+
+{% block content %}
 
 <main>
   <section class="hero">
   <div class="container hero-inner">
+
+    <!-- LEFT -->
     <div class="hero-copy">
       <span class="badge">QA • Development • DevOps</span>
+
       <h1>
         Reliable Software.<br>
         Faster Releases.<br>
         Zero Guesswork.
       </h1>
+
       <p>
         ClearEdge Technologies helps startups and growing businesses build,
         test, and scale software with confidence.
       </p>
 
       <div class="cta">
-        <a class="btn primary" href="contact.html">Get Free Consultation</a>
-        <a class="btn ghost" href="portfolio.html">View Our Work</a>
+        <a class="btn primary" href="/contact">Get Free Consultation</a>
+        <a class="btn ghost" href="/portfolio">View Our Work</a>
       </div>
 
       <div class="hero-stats">
@@ -59,11 +44,49 @@
       </div>
     </div>
 
+
     <div class="hero-image">
       <img src="{{ url_for('static', filename='assets/hero.png') }}" alt="Software Testing & Development">
     </div>
+
   </div>
 </section>
+
+<section class="carousel-section">
+  <h2 class="section-title">What We Do</h2>
+
+  <div class="carousel">
+    <div class="carousel-track">
+
+      <div class="carousel-card">
+        🧪 <h4>QA & Automation</h4>
+        <p>Selenium, Playwright, Cypress — CI/CD ready</p>
+      </div>
+
+      <div class="carousel-card">
+        💻 <h4>Software Development</h4>
+        <p>Web, Mobile & API Engineering</p>
+      </div>
+
+      <div class="carousel-card">
+        ⚡ <h4>Performance & Security</h4>
+        <p>Load testing, API reliability, monitoring</p>
+      </div>
+
+      <div class="carousel-card">
+        🚀 <h4>DevOps & CI/CD</h4>
+        <p>Docker, GitHub Actions, Cloud Pipelines</p>
+      </div>
+
+      <div class="carousel-card">
+        📊 <h4>Consulting</h4>
+        <p>QA Strategy & Process Setup</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
   <section class="audience">
   <div class="container">
@@ -85,6 +108,18 @@
   </div>
 </section>
 
+<section class="logo-carousel">
+  <h2 class="section-title">Trusted Across Industries</h2>
+
+  <div class="logo-track">
+    <span>🚀 Startups</span>
+    <span>🛒 E-Commerce</span>
+    <span>🏦 Fintech</span>
+    <span>📱 SaaS</span>
+    <span>🏢 Enterprises</span>
+    <span>🌍 Global Clients</span>
+  </div>
+</section>
 
 
   <section class="features">
@@ -140,7 +175,7 @@
     <div class="container">
       <h2>Why ClearEdge?</h2>
       <p>We combine testing excellence with full-stack engineering — so issues are found early and fixed fast.</p>
-      <a class="btn" href="about.html">Learn More</a>
+      <a class="btn" href="/about.html">Learn More</a>
     </div>
   </section>
 
@@ -183,36 +218,27 @@
         <p>Automated Postman + CI tests for critical payments APIs.</p>
       </div>
     </div>
-    <a class="btn ghost" href="portfolio.html">See Full Portfolio</a>
+    <a class="btn ghost" href="/portfolio">See Full Portfolio</a>
   </section>
 
+  <section class="testimonial-section">
+  <h2 class="section-title">What Clients Say</h2>
+
+  <div class="testimonial">
+    <p>
+      “ClearEdge helped us stabilize our release pipeline and
+      reduce production bugs by 60%.”
+    </p>
+    <strong>— Startup Founder (US)</strong>
+  </div>
+</section>
   <section class="final-cta">
   <div class="container">
     <h2>Let’s Build Reliable Software Together</h2>
     <p>Tell us about your product — we’ll handle quality and scale.</p>
-    <a class="btn primary" href="contact.html">Start a Conversation</a>
+    <a class="btn primary" href="/contact">Start a Conversation</a>
   </div>
 </section>
 </main>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <div>
-      <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="ClearEdge" class="footer-logo" />
-      <p>ClearEdge Technologies — Delivering high-quality software and QA services.</p>
-    </div>
-    <div class="footer-links">
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://www.google.com/search?q=Exploratory+Testing">Linkdin</a>
-    </div>
-    <div>
-      <p>© <span id="year"></span> ClearEdge Technologies</p>
-    </div>
-  </div>
-</footer>
-
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
-</body>
-</html>
+{% endblock %}

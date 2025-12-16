@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Blog — ClearEdge Technologies{% endblock %}
+
+{% block content %}
+<section class="container blog">
+  <h1>Insights & Engineering Blogs</h1>
+  <p class="muted">QA, Automation, Development & Startup Engineering</p>
+
+  <div class="blog-grid">
+    {% for blog in blogs %}
+      <article class="blog-card">
+        <h3>
+          <a href="/blog/{{ blog.slug }}">
+            {{ blog.title }}
+          </a>
+        </h3>
+        <p>{{ blog.excerpt }}</p>
+
+        <div class="blog-meta">
+          <span>{{ blog.author }}</span>
+          <span>{{ blog.created_at.strftime('%b %d, %Y') }}</span>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

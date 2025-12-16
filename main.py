@@ -1,4 +1,5 @@
-from flask import Flask,Response,jsonify ,render_template,request
+from bson import ObjectId
+from flask import Flask,Response,jsonify, redirect ,render_template,request
 from flask_pymongo import PyMongo
 from datetime import datetime
 #from dotenv import load_dotenv
@@ -79,6 +80,50 @@ def contact_api():
         "status": "success",
         "message": "Thank you! Your request has been submitted successfully."
     }), 201
+
+@app.route("/blog")
+def blog():
+    blogs = mongo.db.blogs.find({"published": True}).sort("created_at", -1)
+    return render_template("blog.html", blogs=blogs)
+
+@app.route("/blog/<slug>")
+def blog_detail(slug):
+    blog = mongo.db.blogs.find_one({"slug": slug, "published": True})
+    if not blog:
+        return "Blog not found", 404
+    return render_template("blog_detail.html", blog=blog)
+
+@app.route("/admin/blogs")
+def admin_blogs():
+    blogs = mongo.db.blogs.find().sort("created_at", -1)
+    return render_template("admin/blogs.html", blogs=blogs)
+
+@app.route("/admin/new_blog", methods=["GET", "POST"])
+def create_blog():
+    if request.method == "POST":
+        data = request.form
+
+        mongo.db.blogs.insert_one({
+            "title": data["title"],
+            "slug": data["slug"],
+            "excerpt": data["excerpt"],
+            "content": data["content"],
+            "author": "ClearEdge Technologies",
+            "published": True,
+            "created_at": datetime.utcnow(),
+            "updated_at": datetime.utcnow()
+        })
+        return redirect("/admin/blogs")
+
+    return render_template("admin/new_blog.html")
+
+@app.route("/admin/blog/delete/<id>")
+def delete_blog(id):
+    mongo.db.blogs.delete_one({"_id": ObjectId(id)})
+    return redirect("/admin/blogs")
+
+
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}About — ClearEdge Technologies{% endblock %}
+
+{% block content %}
+
+<h2>Manage Blogs</h2>
+
+{% for blog in blogs %}
+  <div style="margin-bottom:15px;">
+    <strong>{{ blog.title }}</strong><br>
+    <a href="/blog/{{ blog.slug }}" target="_blank">View</a> |
+    <a href="/admin/blog/delete/{{ blog._id }}">Delete</a>
+  </div>
+{% endfor %}
+
+{% endblock %}

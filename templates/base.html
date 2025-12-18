@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>{% block title %}ClearEdge Technologies{% endblock %}</title>
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/favicon.png') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ClearEdge Technologies — Software testing, QA automation and custom development for startups, SMBs and e-commerce." />
 </head>
 
@@ -13,29 +13,33 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo" href="/"><img src="{{ url_for('static', filename='assets/logo.png') }}" alt="ClearEdge" /></a>
-    <nav class="nav">
+    <a class="logo" href="/">
+      <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="ClearEdge" />
+    </a>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav class="nav" id="navMenu">
       <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/services">Services</a>
       <a href="/portfolio">Portfolio</a>
       <a href="/leaderboard">LeaderShip</a>
+
       <!-- BLOG DROPDOWN -->
-  <div class="dropdown">
-    <a class="dropdown-toggle">Blog ▾</a>
-
-    <div class="dropdown-menu">
-      <a href="/blog">blogs</a>
-      <a href="admin/blogs">All Blogs</a>
-      <a href="/admin/new_blog">Create New Blog</a>
-    </div>
-  </div>
-
+      <div class="dropdown">
+        <a class="dropdown-toggle">Blog ▾</a>
+        <div class="dropdown-menu">
+          <a href="/blog">Blogs</a>
+        </div>
+      </div>
 
       <a class="btn" href="/contact">Contact</a>
     </nav>
   </div>
 </header>
+
 
 <main class="container">
   {% block content %}

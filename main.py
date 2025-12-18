@@ -6,7 +6,7 @@ from datetime import datetime
 import os
 
 # Load .env file ONLY in local environment
-#load_dotenv()
+l#Soad_dotenv()
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
@@ -63,12 +63,12 @@ def contact_api():
         }), 200
 
     # 🔐 Encrypt phone (if you added encryption earlier)
-    phone = data.get("phone", "")
+    #phone = data.get("phone", "")
 
     contact_doc = {
         "name": data.get("name"),
         "email": email,
-        "phone": phone,
+        "phone": data.get("phone"),
         "company": data.get("company"),
         "message": data.get("message"),
         "created_at": datetime.utcnow()
@@ -83,44 +83,24 @@ def contact_api():
 
 @app.route("/blog")
 def blog():
-    blogs = mongo.db.blogs.find({"published": True}).sort("created_at", -1)
+    blogs = mongo.db.blogs.find(
+        {"published": True}
+    ).sort("created_at", -1)
+
     return render_template("blog.html", blogs=blogs)
+
 
 @app.route("/blog/<slug>")
 def blog_detail(slug):
-    blog = mongo.db.blogs.find_one({"slug": slug, "published": True})
+    blog = mongo.db.blogs.find_one(
+        {"slug": slug, "published": True}
+    )
+
     if not blog:
         return "Blog not found", 404
+
     return render_template("blog_detail.html", blog=blog)
 
-@app.route("/admin/blogs")
-def admin_blogs():
-    blogs = mongo.db.blogs.find().sort("created_at", -1)
-    return render_template("admin/blogs.html", blogs=blogs)
-
-@app.route("/admin/new_blog", methods=["GET", "POST"])
-def create_blog():
-    if request.method == "POST":
-        data = request.form
-
-        mongo.db.blogs.insert_one({
-            "title": data["title"],
-            "slug": data["slug"],
-            "excerpt": data["excerpt"],
-            "content": data["content"],
-            "author": "ClearEdge Technologies",
-            "published": True,
-            "created_at": datetime.utcnow(),
-            "updated_at": datetime.utcnow()
-        })
-        return redirect("/admin/blogs")
-
-    return render_template("admin/new_blog.html")
-
-@app.route("/admin/blog/delete/<id>")
-def delete_blog(id):
-    mongo.db.blogs.delete_one({"_id": ObjectId(id)})
-    return redirect("/admin/blogs")
 
 
 

@@ -6,7 +6,7 @@ from datetime import datetime
 import os
 
 # Load .env file ONLY in local environment
-l#Soad_dotenv()
+#load_dotenv()
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
 

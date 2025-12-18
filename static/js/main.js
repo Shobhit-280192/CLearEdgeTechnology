@@ -1,14 +1,17 @@
 // small interactive helpers
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+const form = document.getElementById("contactForm");
 
-  const btn = document.querySelector(".submit-btn");
-  const loader = btn.querySelector(".loader");
-  const status = document.getElementById("formStatus");
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    // your logic
+    const btn = document.querySelector(".submit-btn");
+    const loader = btn.querySelector(".loader");
+    const status = document.getElementById("formStatus");
 
-  btn.disabled = true;
-  loader.style.display = "inline-block";
-  status.textContent = "Sending...";
+    btn.disabled = true;
+    loader.style.display = "inline-block";
+    status.textContent = "Sending...";
 
   setTimeout(() => {
     loader.style.display = "none";
@@ -16,6 +19,18 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     btn.disabled = false;
   }, 1500);
 });
+
+}
+
+  
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
+}
+
+// function toggleMenu() {
+//   document.querySelector('.nav').classList.toggle('active');
+// }
+
 document.getElementById('year')?.textContent == new Date().getFullYear();
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");

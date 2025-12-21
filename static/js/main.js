@@ -1,4 +1,29 @@
 // small interactive helpers
+
+document.querySelectorAll('.view-more-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.leader-card');
+
+    document.getElementById('modalName').innerText = card.dataset.name;
+    document.getElementById('modalRole').innerText = card.dataset.role;
+    document.getElementById('modalExp').innerText = card.dataset.exp;
+    document.getElementById('modalBio').innerText = card.dataset.bio;
+    document.getElementById('modalPhoto').src = card.dataset.photo;
+
+    document.getElementById('leaderModal').classList.add('active');
+  });
+});
+
+document.querySelector('.close-modal').onclick = () => {
+  document.getElementById('leaderModal').classList.remove('active');
+};
+
+window.onclick = e => {
+  if (e.target.id === 'leaderModal') {
+    document.getElementById('leaderModal').classList.remove('active');
+  }
+};
+
 const form = document.getElementById("contactForm");
 
 if (form) {

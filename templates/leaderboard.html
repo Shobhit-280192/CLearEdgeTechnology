@@ -11,20 +11,32 @@
     </div>
 
     <div class="leader-container">
-
-        <div class="leader-card">
+        <div class="leader-card"
+            data-name="Shobhit Agarwal"
+            data-role="Founder"
+            data-exp="Testing Expertise in Web & Mobile Applications (7+ Years)"
+            data-photo="{{ url_for('static', filename='assets/founder.png') }}"
+            data-bio="Shobhit leads QA strategy and automation initiatives across enterprise and startup projects.">
+            
             <img src="{{ url_for('static', filename='assets/founder.png') }}" alt="Shobhit Agarwal">
-            <div class="leader-name">Shobhit Agarwal</div>
-            <div class="leader-role">Founder</div>
+            <h3 class="leader-name">Shobhit Agarwal</h3>
+            <p class="leader-role">Founder</p>
             <h3>Testing Expertise Web and Mobile Application Last 7 Years</h3>
+            <button class="view-more-btn">View More</button>
         </div>
 
-        <div class="leader-card">
-            <img src="{{ url_for('static', filename='assets/co-founder.jpeg') }}" alt="">
-            <div class="leader-name">Mohit Agarwal</div>
-            <div class="leader-role">Co-Founder</div>
-            <h3>Salesforce Development Expertise Last 7 Years</h3>
+        <div class="leader-card"
+            data-name="Mohit Agarwal"
+            data-role="Co-Founder"
+            data-exp="Salesforce Development Expertise Last 7 Years"
+            data-photo="{{ url_for('static', filename='assets/co-founder.jpeg') }}"
+            data-bio="Mohit leads Development strategy initiatives across enterprise and startup projects.">
             
+            <img src="{{ url_for('static', filename='assets/co-founder.jpeg') }}" alt="Mohit Agarwal">
+            <h3 class="leader-name">Mohit Agarwal</h3>
+            <p class="leader-role">Co-Founder</p>
+            <h3>Salesforce Development Expertise Last 7 Years</h3>
+            <button class="view-more-btn">View More</button>
         </div>
 
         <div class="leader-card">
@@ -42,4 +54,15 @@
     </div>
 
 </body>
+    <div class="leader-modal" id="leaderModal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+
+    <img id="modalPhoto" src="" alt="">
+    <h2 id="modalName"></h2>
+    <h4 id="modalRole"></h4>
+    <p id="modalExp"></p>
+    <p id="modalBio"></p>
+  </div>
+</div>
 {% endblock %}

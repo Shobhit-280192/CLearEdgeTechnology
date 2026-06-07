@@ -1,12 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>{% block title %}ClearEdge Technologies{% endblock %}</title>
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/favicon.png') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ClearEdge Technologies — Software testing, QA automation and custom development for startups, SMBs and e-commerce." />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO Title -->
+    <title>
+        {% block title %}
+        ClearEdge Technology | Software Testing, QA Automation & Development Services
+        {% endblock %}
+    </title>
+
+    <!-- SEO Description -->
+    <meta name="description"
+          content="ClearEdge Technology provides Software Testing, QA Automation, Performance Testing, Web Development, Mobile App Development, and IT Consulting services.">
+
+    <!-- SEO Keywords -->
+    <meta name="keywords"
+          content="software testing, QA automation, selenium testing, playwright testing, performance testing, web development, mobile app development, IT consulting">
+
+    <meta name="author" content="ClearEdge Technology">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://clearedgetechnology.com">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"
+          href="{{ url_for('static', filename='assets/favicon.png') }}">
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:title"
+          content="ClearEdge Technology | Software Testing, QA Automation & Development Services">
+
+    <meta property="og:description"
+          content="Software Testing, QA Automation, Performance Testing, Web Development, Mobile App Development and IT Consulting Services.">
+
+    <meta property="og:image"
+          content="https://clearedgetechnology.com/static/assets/logo.png">
+
+    <meta property="og:url"
+          content="https://clearedgetechnology.com">
+
+    <meta property="og:type" content="website">
+
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+          content="ClearEdge Technology">
+    <meta name="twitter:description"
+          content="Software Testing, QA Automation, Development & IT Consulting Services">
+    <meta name="twitter:image"
+          content="https://clearedgetechnology.com/static/assets/logo.png">
+
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ClearEdge Technology",
+      "url": "https://clearedgetechnology.com",
+      "logo": "https://clearedgetechnology.com/static/assets/logo.png",
+      "description": "Software Testing, QA Automation, Performance Testing, Web Development and IT Consulting Services",
+      "email": "info@clearedgetechnology.com"
+    }
+    </script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>

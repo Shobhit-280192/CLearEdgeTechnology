@@ -5,51 +5,105 @@
 {% block content %}
 
 <main>
-  <section class="hero">
-  <div class="container hero-inner">
+  <section class="hero-slider">
+    <div class="slides">
 
-    <!-- LEFT -->
-    <div class="hero-copy">
-      <span class="badge">QA • Development • DevOps</span>
+        <div class="slide active">
+            <img src="{{ url_for('static', filename='assets/hero.png') }}" alt="">
+            <div class="hero-content">
+                <span>SOFTWARE DEVELOPMENT • QUALITY ENGINEERING • CONSULTING</span>
 
-      <h1>
-        Reliable Software.<br>
-        Faster Releases.<br>
-        Zero Guesswork.
-      </h1>
+                <h1>
+                Building Digital Products
+                That Scale With Confidence
+                </h1>
 
-      <p>
-        ClearEdge Technologies helps startups and growing businesses build,
-        test, and scale software with confidence.
-      </p>
+                <p>
+                From software development and cloud solutions to QA automation
+                and performance engineering, we help businesses transform ideas
+                into reliable digital products.
+                </p>
 
-      <div class="hero-buttons">
-  <a href="/contact" class="btn-primary">Get Free Consultation</a>
-  <a href="/portfolio" class="btn-secondary">View Our Work</a>
-</div>
-
-      <div class="hero-stats">
-        <div>
-          <strong>50+</strong>
-          <span>Projects Delivered</span>
+                <div class="hero-buttons">
+                    <a href="/services" class="btn-primary">Explore Services</a>
+                    <a href="/contact" class="btn-secondary">Get Started</a>
+                </div>
+            </div>
         </div>
-        <div>
-          <strong>99%</strong>
-          <span>Client Satisfaction</span>
+
+        <div class="slide">
+            <img src="{{ url_for('static', filename='assets/hero2.png') }}" alt="">
+            <div class="hero-content">
+                <span>DIGITAL TRANSFORMATION</span>
+                <h1>Modern Web & Mobile Solutions</h1>
+                <p>
+                    Scalable applications engineered for performance,
+                    security and growth.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="/portfolio" class="btn-primary">Our Work</a>
+                </div>
+            </div>
         </div>
-        <div>
-          <strong>2025</strong>
-          <span>Founded</span>
+
+        <div class="slide">
+            <img src="{{ url_for('static', filename='assets/hero3.png') }}" alt="">
+            <div class="hero-content">
+                <span>TECHNOLOGY CONSULTING</span>
+                <h1>Helping Businesses Scale Faster</h1>
+                <p>
+                    Strategic consulting, automation and engineering
+                    excellence tailored to your goals.
+                </p>
+            </div>
         </div>
-      </div>
+
+    </div>
+</section>
+
+
+<section class="stats-section">
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="50">0</h2>
+        <p>Projects Delivered</p>
     </div>
 
-
-    <div class="hero-image">
-      <img src="{{ url_for('static', filename='assets/hero.png') }}" alt="Software Testing & Development" loading="lazy">
+    <div class="stat-box">
+        <h2 class="counter" data-target="25">0</h2>
+        <p>Global Clients</p>
     </div>
 
-  </div>
+    <div class="stat-box">
+        <h2 class="counter" data-target="100">0</h2>
+        <p>% Client Satisfaction</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 class="counter" data-target="10">0</h2>
+        <p>Years Experience</p>
+    </div>
+
+</section>
+
+
+<section class="clients-section">
+
+    <h2>Trusted Technologies</h2>
+
+    <div class="logo-slider">
+
+        <img src="{{ url_for('static', filename='assets/Selenium.png') }}">
+        <img src="{{ url_for('static', filename='assets/TestNg.png') }}">
+        <img src="{{ url_for('static', filename='assets/playwright.png') }}">
+        <img src="{{ url_for('static', filename='assets/python.png') }}">
+        <img src="{{ url_for('static', filename='assets/AWS.png') }}">
+        <img src="{{ url_for('static', filename='assets/Docker.png') }}">
+        <img src="{{ url_for('static', filename='assets/Salesforce.png') }}">
+
+    </div>
+
 </section>
 
 <section class="carousel-section">
@@ -171,35 +225,82 @@
 </section>
 
 
-  <section class="about-snippet">
-    <div class="container">
-      <h2>Why ClearEdge?</h2>
-      <p>We combine testing excellence with full-stack engineering — so issues are found early and fixed fast.</p>
-      <a href="/about" class="btn-primary">Learn More</a>
-    </div>
-  </section>
+<section class="why-us">
 
-  <section class="process">
-  <div class="container">
-    <h2>How We Work</h2>
-    <div class="process-steps">
-      <div>
-        <span>01</span>
-        <h4>Understand</h4>
-        <p>We learn your product, users and business goals.</p>
-      </div>
-      <div>
-        <span>02</span>
-        <h4>Build & Test</h4>
-        <p>Engineering and QA work together from day one.</p>
-      </div>
-      <div>
-        <span>03</span>
-        <h4>Scale & Support</h4>
-        <p>We optimize, automate and support long-term growth.</p>
-      </div>
+    <div class="container">
+
+        <div class="section-header">
+            <span>WHY CLEAREDGE</span>
+            <h2>Built For Modern Software Teams</h2>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <h3>Automation First</h3>
+                <p>
+                    Reduce regression effort and release faster with
+                    scalable test automation.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <h3>Engineering Driven</h3>
+                <p>
+                    Our QA engineers understand code, APIs,
+                    cloud platforms and DevOps.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <h3>Business Focused</h3>
+                <p>
+                    We measure success through quality, speed and
+                    customer outcomes.
+                </p>
+            </div>
+
+        </div>
+
     </div>
-  </div>
+</section>
+
+<section class="service-journey">
+
+    <div class="container">
+
+        <h2>How We Deliver Value</h2>
+
+        <div class="journey">
+
+            <div class="step">
+                <span>01</span>
+                <h4>Discover</h4>
+                <p>Understand product goals and risks.</p>
+            </div>
+
+            <div class="step">
+                <span>02</span>
+                <h4>Design</h4>
+                <p>Create scalable testing strategy.</p>
+            </div>
+
+            <div class="step">
+                <span>03</span>
+                <h4>Automate</h4>
+                <p>Implement frameworks and CI pipelines.</p>
+            </div>
+
+            <div class="step">
+                <span>04</span>
+                <h4>Optimize</h4>
+                <p>Continuously improve quality metrics.</p>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
   <section class="work container">

@@ -3,6 +3,7 @@ from flask import Flask,Response,jsonify, redirect ,render_template,request
 from flask_pymongo import PyMongo
 from datetime import datetime
 #from dotenv import load_dotenv
+from flask import send_from_directory
 import os
 
 # Load .env file ONLY in local environment
@@ -46,6 +47,14 @@ def portfolio():
 @app.route("/services")
 def service():
     return render_template("services.html")
+
+@app.route('/robots.txt')
+def robots():
+    return send_from_directory('static', 'robots.txt')
+
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('static', 'sitemap.xml')
 
 @app.route("/api/contact", methods=["POST"])
 def contact_api():

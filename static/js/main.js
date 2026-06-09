@@ -1,3 +1,21 @@
+const cards = document.querySelectorAll('.capability-card');
+
+const observer1 = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+
+    });
+
+},{threshold:.2});
+
+cards.forEach(card=>{
+    observer1.observe(card);
+});
+
 const observer = new IntersectionObserver(entries => {
 
     entries.forEach(entry => {
